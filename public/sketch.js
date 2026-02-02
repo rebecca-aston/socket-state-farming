@@ -103,7 +103,16 @@ function mouseMoved() {
   });
 }
 
+//touch support for mousePressed is not great
 function mousePressed() {
+  emitWater();
+}
+//so implement touchStarted for mobile touch devices
+function touchStarted(){
+  emitWater();
+}
+
+function emitWater(){
   if (experienceState.farm.length == 0) {
     return;
   }
