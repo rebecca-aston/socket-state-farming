@@ -92,7 +92,7 @@ io.on("connection", (socket) => {
     user: experienceState.users[socket.id]
   });
 
-  // ---- MOVEMENT UPDATES (small + frequent) ----
+  // MOVEMENT UPDATES, small + frequent
   socket.on("move", (data) => {
     const user = experienceState.users[socket.id];
     if (!user) return;
